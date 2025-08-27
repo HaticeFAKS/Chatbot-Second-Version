@@ -1,30 +1,34 @@
-# Modular project setup
+# ZetaCAD Chatbot - AI Asistanı
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+_ZetaCAD yazılımı için geliştirilmiş yapay zeka asistanı_
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/silaksc27-9281s-projects/v0-modular-project-setup)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/8hTAXXLLvrr)
+## Özellikler
 
-## Overview
+- 🏢 **ZetaCAD Uzmanı**: Mimari projeler ve ZetaCAD yazılımı hakkında detaylı bilgi
+- 📊 **Kapsamlı Veri**: 188+ ZetaCAD tutoru ve rehberi
+- 🖼️ **Görsel Destek**: Resimler ve videolar ile açıklamalar
+- 🚀 **Hızlı Yanıt**: OpenAI GPT-4 destekli akıllı yanıtlar
+- 🌍 **Türkçe Destek**: Tam Türkçe arayüz ve içerik
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## Kullanılan Teknolojiler
 
-## Deployment
+- **Frontend**: Next.js 14, React, TypeScript
+- **UI**: Tailwind CSS, Shadcn/ui
+- **AI**: OpenAI GPT-4, Vector Store
+- **Deployment**: Vercel
 
-Your project is live at:
+## Kurulum
 
-**[https://vercel.com/silaksc27-9281s-projects/v0-modular-project-setup](https://vercel.com/silaksc27-9281s-projects/v0-modular-project-setup)**
+```bash
+npm install
+npm run dev
+```
 
-## Build your app
+## Yapılandırma
 
-Continue building your app on:
+`.env` dosyasında gerekli anahtarları tanımlayın:
 
-**[https://v0.app/chat/projects/8hTAXXLLvrr](https://v0.app/chat/projects/8hTAXXLLvrr)**
-
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+```env
+OPENAI_API_KEY=your_openai_api_key
+OPENAI_VECTOR_STORE_ID=your_vector_store_id
+```

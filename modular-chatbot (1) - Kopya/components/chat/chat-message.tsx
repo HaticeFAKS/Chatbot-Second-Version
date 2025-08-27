@@ -1,14 +1,130 @@
 "use client"
 
+import React from "react"
 import { cn } from "@/lib/utils"
 import type { ChatMessage } from "@/lib/types"
 import { MessageRating } from "./message-rating"
 import { QuickRating } from "./quick-rating"
+import { useState } from "react"
+import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
+import { ZoomIn, Download } from "lucide-react"
 
 interface ChatMessageComponentProps {
   message: ChatMessage
   ratingStyle?: "stars" | "thumbs"
   onRatingChange?: (messageId: string, rating: number) => void
+}
+
+// Markdown temizleme fonksiyonu - sadece düz metin için
+function cleanMarkdown(text: string): string {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, '$1') // **bold** -> bold
+    .replace(/\*(.*?)\*/g, '$1')     // *italic* -> italic
+    .replace(/#{1,6}\s/g, '')        // # headers -> normal text
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // [text](link) -> text
+    .trim();
+}
+
+// HTML içerik kontrolü ve renderlama
+function renderContent(content: string): React.JSX.Element {
+  // HTML içerik varsa direkt render et
+  if (content.includes('<') && content.includes('>')) {
+    return (
+      <div 
+        className="prose prose-sm dark:prose-invert max-w-none"
+        dangerouslySetInnerHTML={{ __html: content }}
+        style={{
+          // Ensure videos and iframes are responsive
+          '--tw-prose-body': 'var(--muted-foreground)',
+        } as React.CSSProperties}
+      />
+    );
+  }
+  
+  // Düz metin ise markdown temizle
+  return (
+    <div className="prose prose-sm dark:prose-invert max-w-none whitespace-pre-wrap">
+      {cleanMarkdown(content)}
+    </div>
+  );
+}
+
+// Image Gallery Component
+function ImageGallery({ images }: { images: string[] }) {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+
+  if (!images || images.length === 0) return null
+
+  return (
+    <div className="mt-3 space-y-2">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+        {images.map((imageUrl, index) => (
+          <Dialog key={index}>
+            <DialogTrigger asChild>
+              <div className="relative group cursor-pointer overflow-hidden rounded-lg border border-border/50 hover:border-border transition-colors">
+                <img
+                  src={imageUrl}
+                  alt={`Resim ${index + 1}`}
+                  className="w-full h-24 sm:h-32 object-cover transition-transform group-hover:scale-105"
+                  loading="lazy"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement
+                    target.style.display = 'none'
+                    const parent = target.parentElement
+                    if (parent) {
+                      parent.innerHTML = '<div class="w-full h-24 sm:h-32 bg-muted flex items-center justify-center text-muted-foreground text-xs">Resim yüklenemedi</div>'
+                    }
+                  }}
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                  <ZoomIn className="w-6 h-6 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+              </div>
+            </DialogTrigger>
+            <DialogContent className="max-w-4xl w-full p-0">
+              <DialogTitle className="sr-only">Resim Görüntüleyici</DialogTitle>
+              <div className="relative">
+                <img
+                  src={imageUrl}
+                  alt={`Resim ${index + 1}`}
+                  className="w-full h-auto max-h-[80vh] object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement
+                    target.style.display = 'none'
+                    const parent = target.parentElement
+                    if (parent) {
+                      parent.innerHTML = '<div class="w-full h-64 bg-muted flex items-center justify-center text-muted-foreground">Resim yüklenemedi</div>'
+                    }
+                  }}
+                />
+                <div className="absolute top-4 right-4">
+                  <Button
+                    size="sm"
+                    variant="secondary"
+                    className="bg-black/20 hover:bg-black/40 text-white border-0"
+                    onClick={() => {
+                      const link = document.createElement('a')
+                      link.href = imageUrl
+                      link.download = `resim-${index + 1}.jpg`
+                      link.target = '_blank'
+                      link.click()
+                    }}
+                  >
+                    <Download className="w-4 h-4 mr-1" />
+                    İndir
+                  </Button>
+                </div>
+              </div>
+            </DialogContent>
+          </Dialog>
+        ))}
+      </div>
+      <p className="text-xs text-muted-foreground">
+        {images.length} resim • Büyütmek için tıklayın
+      </p>
+    </div>
+  )
 }
 
 export function ChatMessageComponent({
@@ -37,9 +153,12 @@ export function ChatMessageComponent({
               : "bg-card border-border",
           )}
         >
-          <div className="prose prose-sm dark:prose-invert max-w-none whitespace-pre-wrap">
-            {message.content}
-          </div>
+          {renderContent(message.content)}
+          
+          {/* Resim galerisi - sadece bot mesajlarında göster */}
+          {isBot && message.images && message.images.length > 0 && (
+            <ImageGallery images={message.images} />
+          )}
         </div>
 
         {/* Puanlama sadece bot mesajlarında */}

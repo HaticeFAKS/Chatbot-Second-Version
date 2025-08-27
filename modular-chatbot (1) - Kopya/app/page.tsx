@@ -13,7 +13,7 @@ export default function Home() {
           <Chatbot
             ratingStyle="stars"
             mode="embed"
-            title="Dipos IV Yapay Zeka Asistanı"
+            title="ZetaCAD Yapay Zeka Asistanı"
             logoUrl="/co-pilot.gif"
           />
         </div>

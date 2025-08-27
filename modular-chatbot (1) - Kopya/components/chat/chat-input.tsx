@@ -52,11 +52,10 @@ export function ChatInput({
 
   return (
     <Card
-      // üstteki kutucuklarla aynı aile: belirgin sınır + hafif yükseltilmiş arka plan
-      className="border border-sage-200/60 dark:border-sage-800/70 bg-sage-50/90 dark:bg-sage-950/50 backdrop-blur-sm shadow-lg"
+      className="border border-sage-200/60 dark:border-sage-800/70 bg-sage-50/90 dark:bg-sage-950/50 backdrop-blur-sm shadow-sm"
     >
-      <div className="p-3 sm:p-4">
-        <div className="flex items-end gap-2 sm:gap-3">
+      <div className="p-2 sm:p-3">
+        <div className="flex items-end gap-2">
           {/* Textarea */}
           <div className="relative flex-1">
             <Textarea
@@ -67,8 +66,7 @@ export function ChatInput({
               placeholder={placeholder}
               disabled={disabled || isLoading}
               className={cn(
-                // boyutlandırma: komponentin baz stilini bozma
-                "min-h-[44px] max-h-[120px] resize-none rounded-xl transition-all duration-200",
+                "min-h-[36px] max-h-[100px] resize-none rounded-lg transition-all duration-200 text-sm",
                 disabled && "opacity-50 cursor-not-allowed"
               )}
               rows={1}
@@ -76,7 +74,7 @@ export function ChatInput({
 
             {/* Uzun mesaj sayacı */}
             {message.length > 100 && (
-              <div className="absolute -bottom-5 right-2 text-xs text-muted-foreground">
+              <div className="absolute -bottom-4 right-2 text-xs text-muted-foreground">
                 {message.length}/1000
               </div>
             )}
@@ -89,27 +87,24 @@ export function ChatInput({
             aria-label="Mesajı gönder"
             title={isLoading ? "Gönderiliyor..." : "Mesaj gönder (Enter)"}
             className={cn(
-              "w-10 h-10 p-0 rounded-full transition-all duration-200",
+              "w-9 h-9 p-0 rounded-full transition-all duration-200",
               "bg-[#a8cc44] hover:bg-[#a8cc44]/90 dark:bg-[#8fb83a] dark:hover:bg-[#7da332]",
-              "shadow-lg hover:shadow-xl",
+              "shadow-md hover:shadow-lg",
               "disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none",
               canSend && "hover:scale-105"
             )}
           >
             {isLoading ? (
-              <Loader2 className="h-4 w-4 animate-spin text-white" />
+              <Loader2 className="h-3.5 w-3.5 animate-spin text-white" />
             ) : (
-              <Send className="h-4 w-4 text-white" />
+              <Send className="h-3.5 w-3.5 text-white" />
             )}
           </Button>
         </div>
 
-        {/* Alt yardım metni */}
-        <div className="mt-2 flex items-center justify-between text-xs text-muted-foreground">
-          <span className="hidden sm:inline">
-            Enter ile gönder, Shift+Enter ile yeni satır
-          </span>
-          <span className="sm:hidden">Enter ile gönder</span>
+        {/* Alt yardım metni - sadece desktop'ta göster */}
+        <div className="mt-1 hidden sm:block text-xs text-muted-foreground">
+          <span>Enter ile gönder, Shift+Enter ile yeni satır</span>
         </div>
       </div>
     </Card>

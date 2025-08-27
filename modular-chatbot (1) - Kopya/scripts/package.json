@@ -1,0 +1,16 @@
+{
+  "name": "zetacad-scraper",
+  "version": "1.0.0",
+  "description": "Web scraper for ZetaCAD Akademi content",
+  "main": "scrape-zetacad-akademi.js",
+  "scripts": {
+    "scrape": "node scrape-zetacad-akademi.js",
+    "install-deps": "npm install puppeteer"
+  },
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "MIT"
+}

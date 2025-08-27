@@ -165,3 +165,71 @@
   body { @apply bg-background text-foreground; }
 }
 
+/* Chat message HTML content styling */
+.prose iframe {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 200px;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 8px 0;
+}
+
+.prose a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+}
+
+.prose a:hover {
+  opacity: 0.8;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  color: var(--foreground);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+.prose p {
+  margin: 0.75em 0;
+  line-height: 1.6;
+}
+
+.prose ul, .prose ol {
+  margin: 0.75em 0;
+  padding-left: 1.5em;
+}
+
+.prose li {
+  margin: 0.25em 0;
+}
+
+.prose .se-component {
+  margin: 1em 0;
+}
+
+.prose .se-video-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 1em 0;
+}
+
+/* Responsive YouTube embeds */
+.prose .se-video-container iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  min-height: 200px;
+}
+

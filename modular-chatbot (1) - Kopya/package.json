@@ -1,6 +1,7 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
+  "name": "zetacad-chatbot",
+  "version": "1.0.0",
+  "description": "ZetaCAD Yapay Zeka Asistanı - Mimari projeler ve ZetaCAD yazılımı için AI destekli chatbot",
   "private": true,
   "scripts": {
     "build": "next build",

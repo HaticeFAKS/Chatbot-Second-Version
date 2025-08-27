@@ -17,26 +17,19 @@ export async function POST(request: NextRequest) {
           return NextResponse.json({ error: "Missing sessionId or message" }, { status: 400 });
         }
 
-        // Kullanıcı mesajı
-        const userMsg: ChatMessage = {
-          id: uuidv4(),
-          content: message,
-          sender: "user",
-          timestamp: new Date(),
-        };
-
         // OpenAI Assistant çağrısı (KB bağlı)
-        const botContent = await getOpenAIResponse(message);
+        const aiResponse = await getOpenAIResponse(message);
 
         // Bot mesajı
         const botMsg: ChatMessage = {
           id: uuidv4(),
-          content: botContent,
+          content: aiResponse.content,
           sender: "bot",
           timestamp: new Date(),
+          images: aiResponse.images,
         };
 
-        return NextResponse.json({ userMessage: userMsg, botMessage: botMsg });
+        return NextResponse.json({ botMessage: botMsg });
 
       case "get_history":
         if (!sessionId) {

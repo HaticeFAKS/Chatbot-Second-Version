@@ -40,6 +40,7 @@ export function Chatbot({
     initialSessionId || uuidv4()
   );
   const [isReady, setIsReady] = useState(false);
+  const [shownImages, setShownImages] = useState<Set<string>>(new Set()); // Track shown images
 
   // Tasarımsal düzen: full/embed/card modlarına göre tutarlı layout
   const layout = useMemo(() => {
@@ -50,7 +51,7 @@ export function Chatbot({
         bodyWrapper: "flex-1 min-h-0 flex flex-col",
         body: "flex-1 min-h-[60vh] max-h-[calc(100dvh-180px)]",
         inputWrap:
-          "sticky bottom-0 left-0 right-0 border-t p-4 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60",
+          "sticky bottom-0 left-0 right-0 border-t p-2 sm:p-3 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60",
       };
     }
     if (mode === "embed") {
@@ -60,7 +61,7 @@ export function Chatbot({
         bodyWrapper: "flex-1 min-h-0 flex flex-col",
         body: "flex-1 min-h-[60vh] max-h-[calc(100dvh-180px)]",
         inputWrap:
-          "sticky bottom-0 left-0 right-0 border-t p-4 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60",
+          "sticky bottom-0 left-0 right-0 border-t p-2 sm:p-3 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60",
       };
     }
     // card modu
@@ -74,7 +75,7 @@ export function Chatbot({
       bodyWrapper: "flex flex-col",
       body: "flex-1 min-h-[60vh] max-h-[calc(100dvh-180px)]",
       inputWrap:
-        "sticky bottom-0 left-0 right-0 border-t p-4 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60",
+        "sticky bottom-0 left-0 right-0 border-t p-2 sm:p-3 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60",
     };
   }, [mode, className]);
 
@@ -98,11 +99,20 @@ export function Chatbot({
     fetchHistory();
   }, [fetchHistory]);
 
-  // Mesaj gönder (mevcut mantık korunuyor)
+  // Mesaj gönder (geliştirilmiş UX için)
   const handleSendMessage = useCallback(
     async (content: string) => {
       if (isLoading) return;
       setIsLoading(true);
+
+      // Kullanıcı mesajını hemen ekle
+      const userMessage = {
+        id: uuidv4(),
+        content,
+        sender: "user" as const,
+        timestamp: new Date(),
+      };
+      setMessages((prev) => [...prev, userMessage]);
 
       try {
         const res = await fetch("/api/chat", {
@@ -114,11 +124,25 @@ export function Chatbot({
           }),
         });
         const data = await res.json();
-        if (data?.userMessage && data?.botMessage) {
-          setMessages((prev) => [...prev, data.userMessage, data.botMessage]);
+        if (data?.botMessage) {
+          // Filter out already shown images
+          if (data.botMessage.images) {
+            const newImages = data.botMessage.images.filter((img: string) => !shownImages.has(img));
+            if (newImages.length > 0) {
+              data.botMessage.images = newImages;
+              // Add new images to shown set
+              setShownImages(prev => new Set([...prev, ...newImages]));
+            } else {
+              // No new images to show
+              delete data.botMessage.images;
+            }
+          }
+          setMessages((prev) => [...prev, data.botMessage]);
         }
       } catch (e) {
         console.error("[chatbot] send error:", e);
+        // Hata durumunda kullanıcı mesajını kaldır
+        setMessages((prev) => prev.filter(m => m.id !== userMessage.id));
       } finally {
         setIsLoading(false);
       }
@@ -131,6 +155,7 @@ export function Chatbot({
     const newSessionId = uuidv4();
     setSessionId(newSessionId);
     setMessages([]);
+    setShownImages(new Set()); // Clear shown images
     setIsReady(false);
     fetchHistory();
   }, [fetchHistory]);
