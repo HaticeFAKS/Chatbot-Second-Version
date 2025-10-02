@@ -1,0 +1,348 @@
+[
+  {
+    "id": "daireleri-sistemde-mevcut-degildir-hatasi-aksa",
+    "content": "Öncelikle 'Proje Bilgileri' kısmından, 'Bina Bilgilerini Sunucudan Al' diyerek AKSA'dan veriler çekilir, kaydedilir. Sonra binadaki abonelikleri görebilmek için herhangi bir sayaca tıklayıp sağdaki 'Özellikler' panelinde 'Abone No' alanının yanındaki büyütece basılır. Karşınızda açılan ufak pencerede; binanızda hangi birimin hangi numara ile kayıtlı olduğunu görebilirsiniz. Birim numaralarını orada kayıtlı olduğu şekilde yazmalısınız.",
+    "keywords": ["aksa", "daire", "sistem", "mevcut", "degildir", "hata", "proje", "bilgi", "bina", "sunucu", "abone", "birim", "numara"]
+  },
+  {
+    "id": "android-14-ve-uzeri-versiyonlu-telefonlarda-mobil-uygulamaya-alternatif-cozum",
+    "content": "Andorid 14 ve üzerindeki sürümlere, Dipos Mobile (HD) 3 uygulaması ne yazık ki yüklenemiyor. Bu arayüze m.zetacad.com linkten ulaşabilirsiniz. Telefonunuzdaki Google Chrome internet tarayıcısından girerek bu siteyi kullanabilirsiniz. Chrome'da siteye girip sağ üst 3 nokta → 'Ana ekrana ekle' ile uygulama gibi kullanabilirsiniz.",
+    "keywords": ["android", "14", "mobil", "uygulama", "dipos", "mobile", "chrome", "ana", "ekran"]
+  },
+  {
+    "id": "asma-kat-ekleme",
+    "content": "Sağdaki özellikler panelinde katlar menüsünden asma kat ekleyebilirsiniz. Asma kat yüksekliği daima zemin kattan az olmalıdır.",
+    "keywords": ["asma", "kat", "ekleme", "ozellik", "panel", "yukseklik", "zemin"]
+  },
+  {
+    "id": "access-violation-hatasi",
+    "content": "Kaydederken ya da hata kontrol panelini açarken bu hatayı alıyorsanız, bodrum kat ve üst kat ekleyerek tesisat kotlarını kontrol ediniz. Tesisat alt ya da üst kata taşmışsa ve orada bir kat ekli değilse bu hata gelebilir.",
+    "keywords": ["access", "violation", "hata", "kaydetme", "kontrol", "panel", "tesisat", "kot"]
+  },
+  {
+    "id": "bakir-boru-tesisatini-nasil-cizebilirim",
+    "content": "İster çizime başlarken isterseniz de çizimi bitirdikten sonra sayaca sol tuşla tıklayıp açılan özellikler penceresinden 'Tesisat tipi'ni bakır boru seçerek değiştirebilirsiniz.",
+    "keywords": ["bakir", "boru", "tesisat", "cizim", "sayac", "ozellik", "tip"]
+  },
+  {
+    "id": "3-boyutlu-sahnede-kamera-acisini-degistirebilir-miyim",
+    "content": "Görünüm menüsü '3B kamerayı kilitle' seçeneğinden kameranın bakış açısını sabitleyebilir yada bakış açısını serbest olarak kullanabilirsiniz.",
+    "keywords": ["3d", "boyutlu", "sahne", "kamera", "acisi", "gorunum", "kilitle", "serbest"]
+  },
+  {
+    "id": "canli-hatti-kolon-hattina-birlestirme",
+    "content": "İç tesisat çizili projede kolon hattı ekleyebilmek için; 1-Ekle/Projeye kutu ekle demelisiniz 2-Kutu eklendikten sonra kutudan canlı hat noktasına kadar kolon tesisatını çizmelisiniz. Son olarak klavyenizden CTRL+SHİFT tuşlarına aynı anda basılı tutun ve kolon hattından gelen ucu canlı hat üzerine sürükleyip bırakın.",
+    "keywords": ["canli", "hat", "kolon", "birlestirme", "tesisat", "ctrl", "shift"]
+  },
+  {
+    "id": "dipos-4-internal-server-error-hatasi",
+    "content": "'Internal Server Error' hatası aldığınızda, cihaz verimlerinizi baştan girmeniz gerekecektir. Tüm cihazlara tek tek tıklayıp, sağ tarafta açılan özellikler panelindeki VERİM kısmında ne yazıyor ise o veriyi silmeniz ve tekrardan küsüratsız bir şekilde yazıp Enter'a basmaniz olacaktır.",
+    "keywords": ["dipos", "internal", "server", "error", "hata", "cihaz", "verim", "kusuratli"]
+  },
+  {
+    "id": "dubleks-islemler",
+    "content": "Dubleks başladığı katta 'Dubleks Antre Alt', bittiği katta 'Dubleks Antre Üst', ara katlarda 'Dubleks Antre Ara' kullan. Mahal isimleri yanında [X] varsa dubleks mahaller üst üste gelmemiş - mimari yapıda üst üste gelmeli.",
+    "keywords": ["dubleks", "islemler", "antre", "alt", "ust", "ara", "kat", "mahal"]
+  },
+  {
+    "id": "daire-ici-tesisat-projesi-nasil-olusturulur",
+    "content": "Projemizi birlikte oluşturalim. Proje adımdan yeni proje diyoruz. Ardından projemizi adını veriyoruz. Projemizi oluşturuyoruz. Projemizin çizimine başlamadan önce katlarımızı tanımlamalıyız. Kat yönetimine geliyoruz.",
+    "keywords": ["daire", "ici", "tesisat", "proje", "olusturma", "kat", "yonetimi"]
+  },
+
+  {
+    "id": "bbs-degeri-buyuk-hata", 
+    "content": "Tüketim noktası proje BBS değeri CBS BBS'den büyüktür hatası: SAP güncellemesi sonrası bilgi sorgulama sisteminden kaynaklı hata. Çözüm için müşterinin gaz dağıtım firmasına beyan ettiği m² bilgisini alın ve mimaride artırma/azaltma yaparak kontrol sağlayın.",
+    "keywords": ["bbs", "degeri", "cbs", "tuketim", "noktasi", "sap", "guncelleme", "mimari", "metrekare"]
+  },
+  {
+    "id": "sifir-debi-hat-hata",
+    "content": "0 m³ debi yüksüz hat hatası çözümü: 0 m³ hat numarası oluştuysa ve metrajı da 0 mt ise, hat numarasına tıklayıp silin.",
+    "keywords": ["sifir", "debi", "yuksuz", "hat", "hata", "metraj", "silme"]
+  },
+  {
+    "id": "3d-kamera-acisi",
+    "content": "3 boyutlu sahnede kamera açısını değiştirmek: Görünüm menüsü → '3B kamerayı kilitle' seçeneğinden kameranın bakış açısını sabitleyebilir veya serbest kullanabilirsiniz.",
+    "keywords": ["3d", "kamera", "acisi", "gorunum", "kilitle", "serbest", "bakis"]
+  },
+  {
+    "id": "aksa-isinma-tipi",
+    "content": "AKSA bölgesinde ısınma tipi değiştirme: AKSA'da ısınma tipi bilgileri SAP sisteminden gelir, seçim yapma özelliği kapalıdır. Yanlış bilgiler varsa gaz dağıtım firmasıyla görüşüp düzeltmelerini isteyin. Düzeltme sonrası proje bilgileri → bina bilgilerini sunucudan al ile güncel veriyi alın.",
+    "keywords": ["aksa", "isinma", "tipi", "sap", "sistem", "gaz", "dagitim", "firma", "duzeltme"]
+  },
+  {
+    "id": "abone-bilgilendirme-rapor",
+    "content": "Abone bilgilendirme teknik raporu: Onaylanan proje seçeneklerinden her bir birim için Abone Bilgilendirme Teknik Raporunu indirebilirsiniz.",
+    "keywords": ["abone", "bilgilendirme", "teknik", "rapor", "onaylanan", "proje", "birim"]
+  },
+  {
+    "id": "abone-durum-sorgulama",
+    "content": "Abone durum sorgulama: Anasayfa → Projeler menüsünden onaylanan projeler sayfasını açıp detayından abonelik durumunu kontrol edebilirsiniz.",
+    "keywords": ["abone", "durum", "sorgulama", "anasayfa", "projeler", "onaylanan", "abonelik"]
+  },
+  {
+    "id": "endustriyel-cihaz-aksa",
+    "content": "AKSA endüstriyel cihaz kullanımı: Endüstriyel cihaz kullanılacak projelerde abonelik tipi 'Ticari (Üretim Amaçlı)' olmalıdır. Ticari (Isınma Amaçlı) veya Kombi (Konut) aboneliklerinde hata gelir. AKSA ile görüşüp abonelik tipini 'Ticari (Üretim Amaçlı)' olarak düzenletin.",
+    "keywords": ["endustriyel", "cihaz", "aksa", "ticari", "uretim", "amacli", "abonelik", "tipi"]
+  },
+  {
+    "id": "access-violation-hata",
+    "content": "Access Violation hatası: Kaydetme veya hata kontrol paneli açarken bu hata alınıyorsa bodrum/üst kat ekleyerek tesisat kotlarını kontrol edin. Tesisat alt/üst kata taştıysa kat eklenmemiş olabilir. Sayaç eklenmiş ama tesisat parçası çizilmemişse kısa tesisat parçası ekleyin. Virüs programı ZetaCAD'i engelliyor olabilir. İmza güncel olmayabilir.",
+    "keywords": ["access", "violation", "hata", "kaydetme", "kontrol", "paneli", "tesisat", "kot", "virus", "imza"]
+  },
+  {
+    "id": "alarm-exproof-secim",
+    "content": "Alarm cihazını exproof seçme: Alarm cihazı özelliklerinden exproof seçeneğini aktif edin.",
+    "keywords": ["alarm", "cihaz", "exproof", "secim", "ozellik", "aktif"]
+  },
+  {
+    "id": "android-mobil-sorun",
+    "content": "Android 14+ mobil uygulama sorunu: Android 14 ve üzeri sürümlere Dipos Mobile (HD) 3 yüklenemiyor. Geçici çözüm: m.zetacad.com internet arayüzü kullanın. Chrome tarayıcısından siteye girip sağ üst 3 nokta → 'Ana ekrana ekle' ile uygulama gibi kullanabilirsiniz.",
+    "keywords": ["android", "14", "mobil", "uygulama", "dipos", "mobile", "yuklenemiyor", "chrome", "ana", "ekran"]
+  },
+  {
+    "id": "asma-kat-ekleme",
+    "content": "Asma kat ekleme: Özellikler paneli → Katlar menüsünden asma kat ekleyin. Asma kat yüksekliği zemin kattan az olmalı. Örnek: zemin 400cm, asma 250cm ise zemin katta 150cm'ye kadar olan kotlar görünür, 150cm sonrası asma katta görünür. İpucu: Toplam yüksekliği zemin kat yüksekliğine girin.",
+    "keywords": ["asma", "kat", "ekleme", "yukseklik", "zemin", "kot", "ozellik", "panel"]
+  },
+  {
+    "id": "autocad-zetacad-aktarim",
+    "content": "AutoCAD'den ZetaCAD'e mimari aktarımı: Yöntem 1: DXF projesini doğrudan ZetaCAD içinde resim gibi açma. Yöntem 2: DXF projesini açmadan önce AutoCAD projesi üzerinde mahalleri gösterme. İlgili PDF dökümanları mevcut.",
+    "keywords": ["autocad", "zetacad", "mimari", "aktarim", "dxf", "proje", "resim", "mahal"]
+  },
+  {
+    "id": "acik-alan-muhafaza-hata",
+    "content": "Açık alanda muhafaza gereklidir hatası: Belirtilen hattaki vanalar duvar içinde kalmış. ZetaCAD Studio kapat → boş sayfa aç → Dosya → Dipos 4 → Proje Aç → projeyi seç. Hatadaki vanaları duvardan uzaklaştır (duvarı ilerlet veya tesisatı geri çek). Vana duvardan uzaklaştığında düzelir. İşlem bitince Düzenle menüsü disket simgesi ile imzalı kaydet.",
+    "keywords": ["acik", "alan", "muhafaza", "hata", "vana", "duvar", "uzaklastir", "imzali", "kaydet"]
+  },
+  {
+    "id": "baca-detayi-otomatik",
+    "content": "Baca detayının otomatik oluşturulması: Bacayı çizdikten sonra bacaya veya baca açıklamasına tıklayıp sağda açılan panelden baca detayı seçeneğinden ekleyebilirsiniz.",
+    "keywords": ["baca", "detayi", "otomatik", "olusturma", "cizim", "aciklama", "panel"]
+  },
+  {
+    "id": "bakiye-yukleme-003-hata",
+    "content": "Bakiye yükleme 003 hatası: Satın alma ekranında en altta '3D Secure kullanmak istiyorum' seçeneğini işaretleyerek devam edin.",
+    "keywords": ["bakiye", "yukleme", "003", "hata", "3d", "secure", "satin", "alma"]
+  },
+  {
+    "id": "bakir-boru-tesisat",
+    "content": "Bakır boru tesisatı çizimi: Çizime başlarken veya bitirdikten sonra sayaca sol tık → özellikler penceresi → 'Tesisat tipi'ni bakır boru seçerek değiştirin.",
+    "keywords": ["bakir", "boru", "tesisat", "cizim", "sayac", "ozellik", "tip", "secim"]
+  },
+  {
+    "id": "birim-siniri-hata",
+    "content": "Birim sınırı hatası: Dubleks mahalle tanımlaması veya dubleks yapının oluşmaması sebebiyle hat yanlış mahalleden geçiyor. Dubleks yapıda her katta aynı hizaya dubleks antre tanımlaması yapın. Üst katta dubleks antre üst, alt katta dubleks antre alt seçin. İki mahallede birim içerisine birer kapı açın.",
+    "keywords": ["birim", "siniri", "hata", "dubleks", "mahal", "antre", "ust", "alt", "kapi"]
+  },
+  {
+    "id": "brulor-model-kodu-hata",
+    "content": "Brülör model kodu hatası: Brülör markası kısmını 'diğer' seçerek işlem yapın.",
+    "keywords": ["brulor", "model", "kodu", "hata", "marka", "diger", "secim"]
+  },
+  {
+    "id": "bolge-secimi-kullanici",
+    "content": "Bölge seçimi ve kullanıcı bilgileri kaydetme: Boş projede Yardım/Hakkında menüsünden bölge seçin → Dosya → Farklı kaydet. Ayarlar/Firma bilgilerinden seri no, kullanıcı adı, şifre girin ve doğrulayın. Firma bilgilerini Dipos'tan alıp kaydedin. Proje → Firma bilgilerini güncelle. Web modülü kapat/aç - bölge otomatik gelecek.",
+    "keywords": ["bolge", "secimi", "kullanici", "bilgi", "kaydetme", "yardim", "firma", "seri", "dogrulama"]
+  },
+  {
+    "id": "co-alarm-cihazi",
+    "content": "C.O Alarm cihazı koyma: Alarm cihazı özelliklerinden CO alarm seçeneğini aktif edin ve uygun konuma yerleştirin.",
+    "keywords": ["co", "alarm", "cihazi", "koyma", "carbon", "monoxide", "aktif"]
+  },
+  {
+    "id": "ce-tse-belge-ekleme",
+    "content": "CE/TSE belgelerinin eklenmesi: Proje gönderim ekranı dosya havuzu sekmesi veya anasayfa proje detay ekranından CE/TSE belgesi ekle seçeneği ile sistemde kayıtlı belgeler arasında arama yaparak ekleyin.",
+    "keywords": ["ce", "tse", "belge", "ekleme", "dosya", "havuz", "proje", "gonderim"]
+  },
+  {
+    "id": "canli-kolon-birlestime",
+    "content": "Canlı hattı kolon hattına birleştirme: 1) Ekle/Projeye kutu ekle 2) Kutudan canlı hat noktasına kadar kolon tesisatı çiz 3) Kolon hattı ile canlı hat tesisat kotları aynı olmalı 4) CTRL+SHIFT basılı tutup kolon hattı ucunu canlı hat üzerine sürükle.",
+    "keywords": ["canli", "hat", "kolon", "birlestime", "kutu", "ekle", "tesisat", "kot", "ctrl", "shift"]
+  },
+  {
+    "id": "cihaz-bildirim-formu",
+    "content": "Cihaz bildirim formu oluşturma: Cihaz bölümü → yeni form → yetkili mühendis seç → tüketim noktası gir → bilgileri gaz dağıtım firmasından getir → telefon gir → eski/yeni cihaz bilgileri → etiket ver → kaydet veya mobil/e-imza ile gönder.",
+    "keywords": ["cihaz", "bildirim", "formu", "olusturma", "muhendis", "tuketim", "noktasi", "gaz", "dagitim"]
+  },
+  {
+    "id": "cihaz-marka-model-sorun",
+    "content": "Cihaz marka model seçilememesi: ZetaCAD Studio kapat → Belgelerim/Zetacad/XMLfiles klasörünü sil → ZetaCAD çalıştır → cihazı sil → Araçlar/cihaz marka listesini güncelle → güncelleme sonrası tekrar cihaz ekle.",
+    "keywords": ["cihaz", "marka", "model", "secilememe", "xmlfiles", "klasor", "guncelle", "araclar"]
+  },
+  {
+    "id": "dn65-dn50-vana",
+    "content": "DN65 hatta DN50 vana kullanımı: Redüksiyon kısmında hattın kırıklı kalmaması gerekir. Redüksiyon sonrası hattı seç → backspace (hat sonuna kadar) → kırıklı hat varsa delete ile sil. Ana kesme ve teprem vanası en dip noktalarından kırılarak vana DN50, sonraki hat DN65 seçilmeli.",
+    "keywords": ["dn65", "dn50", "vana", "reduksiyon", "kirikli", "hat", "backspace", "delete", "kesme", "teprem"]
+  },
+  {
+    "id": "daire-kolon-ekleme",
+    "content": "Daire/dükkan içi tesisata kolon ekleme: Servis kutusundan kolon tesisatı çiz → eski tesisat yerine kadar götür → sayaç koy → sayaçtan sonraki ilk boruyu çiz → eski tesisattaki sayaçtan sonraki boru sağ tık/kes → kolon tesisatına yapıştır → eski sayaç ve branşmanı sil.",
+    "keywords": ["daire", "dukkan", "ici", "tesisat", "kolon", "ekleme", "servis", "kutu", "sayac", "kes", "yapistir"]
+  },
+  {
+    "id": "daire-sifir-cizim",
+    "content": "Daire no 0 olan çizimler: Birim kısmında boşluk bırakıp sonra 0 yazarak tesisat numarasını gir → AKSA'dan çek → çıkan uyarıyı 'hayır' seç.",
+    "keywords": ["daire", "sifir", "cizim", "birim", "bosluk", "tesisat", "numarasi", "aksa", "uyari"]
+  },
+  {
+    "id": "daire-ici-tesisat-proje",
+    "content": "Daire içi tesisat projesi oluşturma: Yeni proje → proje adı ver → proje bilgileri gir → adres sorgusu → proje tipi belirt → kat yönetimi → katları tanımla → çizim sahneleri kullan → sayaç koy → tesisat çiz → cihaz ekle → çap belirle → mimari çiz → mahal tanımla → hata kontrolü → tüketim noktası gir.",
+    "keywords": ["daire", "ici", "tesisat", "proje", "olusturma", "kat", "yonetimi", "sayac", "cihaz", "cap", "mimari", "mahal"]
+  },
+  {
+    "id": "dijital-gaz-acma",
+    "content": "Dijital gaz açma ve randevu: Dijital gaz açma sekmesi → Dosyalar → proje ara → randevu talep bildirim oluştur. Randevu durumu: Talepler/Randevular menüsü. Evrak ekleme: randevu talebi sonrası → evrak ekle → dosya seç (Türkçe karakter kullanma) → evrak tipi seç → proje tanımla.",
+    "keywords": ["dijital", "gaz", "acma", "randevu", "talep", "evrak", "ekleme", "turkce", "karakter"]
+  },
+  {
+    "id": "dipos4-internal-server",
+    "content": "Dipos 4 Internal Server Error: Cihaz verimlerini baştan girin. Küsüratlı değerler karışıklık yaratır. Tüm cihazlara tık → özellikler paneli → VERİM kısmındaki değeri sil → küsüratsız yazıp Enter.",
+    "keywords": ["dipos4", "internal", "server", "error", "cihaz", "verim", "kusuratli", "deger", "sil"]
+  },
+  {
+    "id": "dipos4-kullanici-guncelleme",
+    "content": "Dipos 4 kullanıcı bilgileri güncelleme: Firma ismi/bölgesi, e-imza kullanan mühendisin adı/soyadı, şirket/şahsi mail adresi bilgilerini iletin.",
+    "keywords": ["dipos4", "kullanici", "bilgi", "guncelleme", "firma", "bolge", "eimza", "muhendis", "mail"]
+  },
+  {
+    "id": "dipos4-kurulum",
+    "content": "Dipos 4 kurulum: Dipos 4 anasayfası → DİĞER menüsü → ZetaCAD Studio kurulum dosyası indir.",
+    "keywords": ["dipos4", "kurulum", "anasayfa", "diger", "menu", "zetacad", "studio"]
+  },
+  {
+    "id": "dipos4-access-violation",
+    "content": "Dipos 4 Access Violation At Address hatası: Ayarlar → Firma Bilgileri → E-imza sekmesi boş mu kontrol et. Boş ise büyüteç ile imza sertifika numarası getir. Dolu ise çarpı ile sil ve tekrar getir.",
+    "keywords": ["dipos4", "access", "violation", "address", "ayarlar", "firma", "eimza", "sertifika", "buyutec"]
+  },
+  {
+    "id": "dipos-mobil-giris",
+    "content": "Dipos mobil uygulama giriş: Uygulama mağazasından 'Diposmobile' ara ve indir. Dipos → Bilgilerim menüsünden kullanıcı adını öğren. Şifre Dipos giriş şifresi ile aynı.",
+    "keywords": ["dipos", "mobil", "uygulama", "giris", "diposmobile", "bilgilerim", "kullanici", "adi", "sifre"]
+  },
+  {
+    "id": "evrak-acilmama-hata",
+    "content": "Dipos'ta evrak açılmama (404 Not Found): Evrak isimlendirmesinde Türkçe karakter kullanılmış. Evrağa sağ tık → yeniden adlandır → Türkçe karakter olmadan isim ver (örn: test.pdf) → tekrar yükle.",
+    "keywords": ["evrak", "acilmama", "404", "not", "found", "turkce", "karakter", "yeniden", "adlandir"]
+  },
+  {
+    "id": "dubleks-7m3-secim",
+    "content": "Dubleks 7 m³ seçimi: Tüketim vanası veya sayaca tık → sağda açılan pencere → birim tipini dubleks seç.",
+    "keywords": ["dubleks", "7m3", "secim", "tuketim", "vanasi", "sayac", "birim", "tipi"]
+  },
+  {
+    "id": "dubleks-islemler",
+    "content": "Dubleks işlemleri: Dubleks başladığı katta 'Dubleks Antre Alt', bittiği katta 'Dubleks Antre Üst', ara katlarda 'Dubleks Antre Ara' kullan. Mahal isimleri yanında [X] varsa dubleks mahaller üst üste gelmemiş - mimari yapıda üst üste gelmeli.",
+    "keywords": ["dubleks", "islemler", "antre", "alt", "ust", "ara", "kat", "mahal", "mimari", "yapida"]
+  },
+  {
+    "id": "eimza-tanimlama",
+    "content": "E-imza tanımlama: E-imza sertifika kontrolü ve ZetaCAD'e tanımlama için ilgili PDF dökümanını inceleyin.",
+    "keywords": ["eimza", "tanimlama", "sertifika", "kontrol", "zetacad", "dokuman"]
+  },
+  {
+    "id": "endustriyel-dukkan-proje",
+    "content": "Endüstriyel dükkan projesi: Bağlantı numarası gir → katları belirle → sayaç koy → filtre ekle → tiyazlar ekle → fanlı brülörler (marka seç) → özel ötüm grubu ekle → gaz yolu detayı → mimari çizim → çap belirleme → regülatör ayarları → menfez ekleme → hata kontrolü → birim numarası gir.",
+    "keywords": ["endustriyel", "dukkan", "proje", "baglanti", "sayac", "filtre", "tiyaz", "fanli", "brulor", "regulator", "menfez"]
+  },
+  {
+    "id": "eski-kayit-geri-donme",
+    "content": "Eski kayda geri dönme: Düzenle menüsü → Kayıt Geçmişi → tarih/saat seçimi yaparak o kayda dön.",
+    "keywords": ["eski", "kayit", "geri", "donme", "duzenle", "gecmis", "tarih", "saat"]
+  },
+  {
+    "id": "esnek-boru-tesisat",
+    "content": "Esnek boru (bükülebilir hortum) tesisatı: Çizime başlarken veya bitirdikten sonra sayaca sol tık → özellikler penceresi → 'Tesisat tipi'ni bükülebilir hortum seç.",
+    "keywords": ["esnek", "boru", "bukuleblir", "hortum", "tesisat", "sayac", "ozellik", "tip"]
+  },
+  {
+    "id": "fatura-takip",
+    "content": "Fatura takip ve ödeme: Dipos sisteminden fatura durumunuzu takip edebilir ve online ödeme yapabilirsiniz.",
+    "keywords": ["fatura", "takip", "odeme", "dipos", "sistem", "online"]
+  },
+  {
+    "id": "gaz-tesisati-cizim",
+    "content": "Gaz tesisatı çizimi: Sayaç konumlandır → tesisat hatlarını çiz → cihazları ekle → çapları belirle → hata kontrolü yap → proje kaydet.",
+    "keywords": ["gaz", "tesisati", "cizim", "sayac", "hat", "cihaz", "cap", "hata", "kontrol"]
+  },
+  {
+    "id": "hata-kontrol-paneli",
+    "content": "Hata kontrol paneli: F1 tuşu veya menüden hata kontrolü → hataları listele → her hataya tıklayarak konuma git → hataları düzelt → tekrar kontrol et.",
+    "keywords": ["hata", "kontrol", "paneli", "f1", "tus", "listele", "konum", "duzelt"]
+  },
+  {
+    "id": "izometri-gorunum",
+    "content": "İzometri görünüm: İzometri sahnesi → tesisatın 3D görünümü → çap kontrolü → kot kontrolü → yazı düzenleme.",
+    "keywords": ["izometri", "gorunum", "3d", "tesisat", "cap", "kot", "yazi", "duzenleme"]
+  },
+  {
+    "id": "kat-yonetimi",
+    "content": "Kat yönetimi: Katlar menüsü → kat sayısı belirle → kat yükseklikleri → asma kat ekle → bodrum kat ekle → çizim katı seç.",
+    "keywords": ["kat", "yonetimi", "sayi", "yukseklik", "asma", "bodrum", "cizim"]
+  },
+  {
+    "id": "lisans-sorunu",
+    "content": "Lisans sorunu: Program açılmıyorsa → internet bağlantısı kontrol → lisans sunucusu erişimi → teknik destek iletişim.",
+    "keywords": ["lisans", "sorun", "program", "acilmiyor", "internet", "baglanti", "sunucu"]
+  },
+  {
+    "id": "mahal-tanimlama",
+    "content": "Mahal tanımlama: Mimari çizim → odalar çiz → akıllı mahal tanımlama → mahal isimlerini gir → alan hesaplama.",
+    "keywords": ["mahal", "tanimlama", "mimari", "oda", "akilli", "isim", "alan"]
+  },
+  {
+    "id": "mimari-import",
+    "content": "Mimari import: DXF/DWG dosyası → Dosya menü → İçe aktar → dosya seç → ölçek ayarla → katman seç.",
+    "keywords": ["mimari", "import", "dxf", "dwg", "dosya", "ice", "aktar", "olcek", "katman"]
+  },
+  {
+    "id": "online-yardim",
+    "content": "Online yardım: Yardım menüsü → online dökümanlar → video eğitimler → forum → teknik destek.",
+    "keywords": ["online", "yardim", "dokuman", "video", "egitim", "forum", "teknik", "destek"]
+  },
+  {
+    "id": "proje-arsivleme",
+    "content": "Proje arşivleme: Tamamlanan projeleri arşivle → yedekleme → eski proje temizleme → depolama optimizasyonu.",
+    "keywords": ["proje", "arsivleme", "tamamlanan", "yedekleme", "temizleme", "depolama"]
+  },
+  {
+    "id": "proje-kopyalama",
+    "content": "Proje kopyalama: Dosya → Farklı kaydet → yeni proje adı → benzer projeler için şablon.",
+    "keywords": ["proje", "kopyalama", "farkli", "kaydet", "sablon", "benzer"]
+  },
+  {
+    "id": "rapor-olusturma",
+    "content": "Rapor oluşturma: Raporlar menüsü → malzeme listesi → hesap raporu → çap tablosu → yazdırma ayarları.",
+    "keywords": ["rapor", "olusturma", "malzeme", "liste", "hesap", "cap", "tablo", "yazdirma"]
+  },
+  {
+    "id": "sayac-konumlandirma",
+    "content": "Sayaç konumlandırma: Uygun konum seç → giriş noktası → erişilebilir alan → güvenlik mesafesi → abone bilgileri.",
+    "keywords": ["sayac", "konumlandirma", "konum", "giris", "erisim", "guvenlik", "mesafe", "abone"]
+  },
+  {
+    "id": "tesisat-cap-hesabi",
+    "content": "Tesisat çap hesabı: Debiye göre otomatik hesaplama → basınç kaybı kontrolü → minyatür çap sınırları → optimizasyon.",
+    "keywords": ["tesisat", "cap", "hesabi", "debi", "otomatik", "basinc", "kaybi", "optimizasyon"]
+  },
+  {
+    "id": "vana-ve-ek-parcalar",
+    "content": "Vana ve ek parçalar: Kesme vanaları → ayırma vanaları → filtreler → regülatörler → basınç düşürücüler → konumlandırma.",
+    "keywords": ["vana", "ek", "parca", "kesme", "ayirma", "filtre", "regulator", "basinc"]
+  },
+  {
+    "id": "yazdirma-ayarlari",
+    "content": "Yazdırma ayarları: Dosya → Yazdır → sayfa ayarları → ölçek → renk/siyah-beyaz → kağıt boyutu.",
+    "keywords": ["yazdirma", "ayarlari", "sayfa", "olcek", "renk", "siyah", "beyaz", "kagit"]
+  },
+  {
+    "id": "yedekleme-geri-yukleme",
+    "content": "Yedekleme ve geri yükleme: Otomatik yedekleme → manuel yedekleme → proje geri yükleme → ayar yedekleme.",
+    "keywords": ["yedekleme", "geri", "yukleme", "otomatik", "manuel", "proje", "ayar"]
+  },
+  {
+    "id": "zetacad-guncelleme",
+    "content": "ZetaCAD güncelleme: Otomatik güncelleme kontrolü → yeni sürüm bildirimi → güncelleme indirme → kurulum → yenilik listesi.",
+    "keywords": ["zetacad", "guncelleme", "otomatik", "surum", "bildirim", "indirme", "kurulum"]
+  }
+]
