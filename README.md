@@ -126,8 +126,8 @@ npm run dev
 1. **Projeyi Klonlayın**
 
    ```bash
-   git clone https://github.com/HaticeFAKS/Chatbot-First-Version.git
-   cd "Chatbot-First-Version/dipos chatbot"
+   git clone https://github.com/HaticeFAKS/Chatbot-Second-Version.git
+   cd "Chatbot-Second-Version/dipos chatbot"
    ```
 
 2. **Bağımlılıkları Yükleyin**
@@ -301,7 +301,7 @@ CMD ["npm", "start"]
 // Request
 {
   "message": "ZetaCAD'de nasıl çizgi çizebilirim?",
-  "threadId": "thread_abc123" // opsiyonel - OpenAI'dan gelir
+  "threadId": "thread_abc123" //  OpenAI'dan gelir
 }
 
 // Response
