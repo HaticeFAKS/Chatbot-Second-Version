@@ -2,7 +2,7 @@
 
 ## 🎯 Proje Hakkında
 
-ZetaCAD Yapay Zeka Asistanı, mimari tasarım yazılımı ZetaCAD kullanıcıları için geliştirilmiş akıllı bir chatbot uygulamasıdır. OpenAI'ın GPT-4 teknolojisini ve Assistant API'sini kullanan bu asistan, kullanıcılara ZetaCAD yazılımı hakkında detaylı bilgi, çizim teknikleri, proje yönetimi ve problem çözme konularında 7/24 destek sağlar.
+ZetaCAD Yapay Zeka Asistanı, mimari tasarım yazılımı ZetaCAD kullanıcıları için geliştirilmiş akıllı bir chatbot uygulamasıdır. OpenAI'ın GPT-4 teknolojisini ve Assistant API'sini kullanan bu asistan, kullanıcılara ZetaCAD yazılımı hakkında detaylı bilgi, çizim teknikleri, proje yönetimi ve problem çözme konularında destek sağlar.
 
 
 ### 🔧 Nasıl Çalışır?
@@ -36,19 +36,6 @@ ZetaCAD Yapay Zeka Asistanı, mimari tasarım yazılımı ZetaCAD kullanıcılar
 - [🚀 Deployment](#-deployment)
 - [📖 API Dokümantasyonu](#-api-dokümantasyonu)
 - [🤝 Katkıda Bulunma](#-katkıda-bulunma)
-
----
-
-## � Proje Hakkında
-
-ZetaCAD Yapay Zeka Asistanı, mimari tasarım yazılımı ZetaCAD kullanıcıları için geliştirilmiş akıllı bir chatbot uygulamasıdır. OpenAI'ın GPT-4 teknolojisini kullanan bu asistan, kullanıcılara ZetaCAD yazılımı hakkında detaylı bilgi, çizim teknikleri, proje yönetimi ve problem çözme konularında 7/24 destek sağlar.
-
-### 🎯 Hedef Kitle
-
-- Mimari tasarım öğrencileri
-- ZetaCAD kullanıcıları
-- Mimarlık büroları
-- CAD yazılımı öğrenmek isteyenler
 
 ---
 
