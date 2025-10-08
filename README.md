@@ -4,6 +4,12 @@
 
 ZetaCAD Yapay Zeka Asistanı, mimari tasarım yazılımı ZetaCAD kullanıcıları için geliştirilmiş akıllı bir chatbot uygulamasıdır. OpenAI'ın GPT-4 teknolojisini ve Assistant API'sini kullanan bu asistan, kullanıcılara ZetaCAD yazılımı hakkında detaylı bilgi, çizim teknikleri, proje yönetimi ve problem çözme konularında 7/24 destek sağlar.
 
+### 🎯 Hedef Kitle
+
+- Mimari tasarım öğrencileri
+- ZetaCAD kullanıcıları
+- Mimarlık büroları
+- CAD yazılımı öğrenmek isteyenler
 
 ### 🔧 Nasıl Çalışır?
 
@@ -15,6 +21,8 @@ ZetaCAD Yapay Zeka Asistanı, mimari tasarım yazılımı ZetaCAD kullanıcılar
    <img src="public/co-pilot.gif" alt="ZetaCAD Asistanı" width="100" height="100">
 
    **ZetaCAD yazılımı için geliştirilmiş akıllı AI asistanı**
+
+   _Mimari projeleriniz ve ZetaCAD kullanımı için 7/24 destek_
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.2.4-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
@@ -152,18 +160,17 @@ npm run dev
 
 3. **Ortam Değişkenlerini Ayarlayın**
 
-   ```bash
-   # Gizli bilgiler için .env.local dosyası oluşturun (önerilen)
-   copy .env.example .env.local
-
-   # Veya mevcut .env dosyasını düzenleyin
+   ````bash
+   # Mevcut .env dosyasını düzenleyin
    notepad .env
-   ```
 
-4. **Geliştirme Sunucusunu Başlatın**
+   # Veya .env.local dosyası oluşturup gizli bilgileri orada tutun (önerilen)
+   copy .env .env.local
+   notepad .env.local
+   ```4. **Geliştirme Sunucusunu Başlatın**
    ```bash
    npm run dev
-   ```
+   ````
 
 ---
 
@@ -179,11 +186,14 @@ OPENAI_API_KEY=your_openai_api_key_here
 OPENAI_ASSISTANT_ID=your_assistant_id_here
 OPENAI_VECTOR_STORE_ID=your_vector_store_id_here
 
-# Veritabanı (Opsiyonel)
+# Veritabanı (Opsiyonel - Chat kayıtları için)
 DB_SERVER=your_database_server
 DB_DATABASE=your_database_name
 DB_USERNAME=your_database_username
 DB_PASSWORD=your_database_password
+DB_PORT=1433
+DB_ENCRYPT=false
+DB_TRUST_SERVER_CERTIFICATE=true
 
 # Uygulama Ayarları
 NEXT_PUBLIC_APP_URL=http://localhost:3000
@@ -195,6 +205,22 @@ NODE_ENV=development
 1. **OpenAI API Key**: [OpenAI Platform](https://platform.openai.com/api-keys) adresinden alabilirsiniz
 2. **Assistant ID**: OpenAI Playground'da asistan oluşturduktan sonra ID'yi kopyalayın
 3. **Vector Store ID**: OpenAI dosya yükleme bölümünden vector store ID'sini alın
+
+**Kurulum sonrası:** Bu bilgileri `.env` dosyasındaki ilgili alanlara yapıştırın.
+
+### 🗄️ Veritabanı Kurulumu (Opsiyonel)
+
+Chat geçmişi ve kullanıcı feedback'lerini kaydetmek için SQL Server veritabanı kullanabilirsiniz:
+
+1. **SQL Server'ı hazırlayın** (LocalDB, Express veya tam sürüm)
+
+2. **Veritabanını oluşturun:**
+
+   ```bash
+   # SQL Server Management Studio ile database-setup.sql dosyasını çalıştırın
+   # Veya komut satırından:
+   sqlcmd -S localhost -i database-setup.sql
+   ```
 
 ---
 
@@ -346,6 +372,53 @@ CMD ["npm", "start"]
 }
 ```
 
+### Feedback Endpoint
+
+**POST** `/api/feedback`
+
+```typescript
+// Update Feedback
+{
+  "sessionId": "thread_abc123",
+  "feedback": 1 // 0=pending, 1=helpful, 2=not_helpful, 3=very_helpful, 4=poor, 5=excellent
+}
+
+// Response
+{
+  "success": true,
+  "message": "Feedback updated successfully"
+}
+```
+
+**GET** `/api/feedback?sessionId=thread_abc123`
+
+```typescript
+// Response - Session History
+{
+  "sessionConversation": "{\"Messages\":[...]}",
+  "sessionDate": "2025-10-03T10:30:00.000Z",
+  "userFeedBack": 1,
+  "sessionId": "thread_abc123"
+}
+```
+
+### Database Test Endpoint
+
+**GET** `/api/database`
+
+```typescript
+// Response
+{
+  "success": true,
+  "message": "Database connection successful",
+  "details": {
+    "server": "localhost",
+    "database": "ZetaCADChatDB",
+    "connected": true
+  }
+}
+```
+
 ---
 
 ## 🧪 Test Etme
@@ -392,30 +465,6 @@ npm update
 - `build` - Production build yapar
 - `start` - Production sunucusu çalıştırır
 - `lint` - ESLint kontrolü yapar
-
----
-
-## 📊 Veri Yönetimi
-
-### Bilgi Bankası Güncelleme
-
-```bash
-# CSV'den JSON'a dönüştürme
-node process_csv_to_json.js
-
-# Duplicate verileri temizleme
-node remove_duplicates.js
-
-# OpenAI'a yükleme
-node scripts/openai-upload-helper.js
-```
-
-### Desteklenen Veri Formatları
-
-- ✅ CSV dosyaları
-- ✅ JSON knowledge base
-- ✅ Markdown dökümanları
-- ✅ Resim dosyaları (PNG, JPG, GIF)
 
 ---
 
