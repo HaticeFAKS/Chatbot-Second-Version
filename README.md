@@ -4,12 +4,6 @@
 
 ZetaCAD Yapay Zeka Asistanı, mimari tasarım yazılımı ZetaCAD kullanıcıları için geliştirilmiş akıllı bir chatbot uygulamasıdır. OpenAI'ın GPT-4 teknolojisini ve Assistant API'sini kullanan bu asistan, kullanıcılara ZetaCAD yazılımı hakkında detaylı bilgi, çizim teknikleri, proje yönetimi ve problem çözme konularında 7/24 destek sağlar.
 
-### 🎯 Hedef Kitle
-
-- Mimari tasarım öğrencileri
-- ZetaCAD kullanıcıları
-- Mimarlık büroları
-- CAD yazılımı öğrenmek isteyenler
 
 ### 🔧 Nasıl Çalışır?
 
@@ -20,9 +14,6 @@ ZetaCAD Yapay Zeka Asistanı, mimari tasarım yazılımı ZetaCAD kullanıcılar
 5. **UI**: Embed/Card/Full modlarında çalışabilen esnek arayüzn="center">
    <img src="public/co-pilot.gif" alt="ZetaCAD Asistanı" width="100" height="100">
 
-   **ZetaCAD yazılımı için geliştirilmiş akıllı AI asistanı**
-
-   _Mimari projeleriniz ve ZetaCAD kullanımı için 7/24 destek_
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.2.4-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
@@ -108,7 +99,7 @@ ZetaCAD Yapay Zeka Asistanı, mimari tasarım yazılımı ZetaCAD kullanıcılar
 
 ### Geliştirme Araçları
 
-- **📦 NPM** - Paket yöneticisi (package-lock.json)
+- **📦 NPM** - Paket yöneticisi
 - **🔧 ESLint** - Kod kalitesi
 - **🎯 PostCSS** - CSS işleme
 - **⚡ Next.js App Router** - Modern routing
@@ -186,7 +177,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 OPENAI_ASSISTANT_ID=your_assistant_id_here
 OPENAI_VECTOR_STORE_ID=your_vector_store_id_here
 
-# Veritabanı (Opsiyonel - Chat kayıtları için)
+# Veritabanı (Chat kayıtları için)
 DB_SERVER=your_database_server
 DB_DATABASE=your_database_name
 DB_USERNAME=your_database_username
