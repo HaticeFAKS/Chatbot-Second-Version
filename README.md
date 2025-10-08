@@ -127,7 +127,7 @@ npm run dev
 
    ```bash
    git clone https://github.com/HaticeFAKS/Chatbot-Second-Version.git
-   cd "Chatbot-Second-Version/dipos chatbot"
+   cd Chatbot-Second-Version/dipos chatbot
    ```
 
 2. **Bağımlılıkları Yükleyin**
