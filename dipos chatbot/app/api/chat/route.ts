@@ -14,6 +14,8 @@ export async function POST(request: NextRequest) {
 
     const aiResponse = await getOpenAIResponse(message, threadId);
 
+    // Note: Chat logging is now handled after rating is provided
+    // No immediate database logging to prevent saving conversations without user feedback
 
     const botMsg: ChatMessage = {
       message: aiResponse.response,
@@ -23,6 +25,26 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(botMsg);
   } catch (err) {
     console.error("Chat API error:", err);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    
+    let errorMessage = 'An unexpected error occurred';
+    let statusCode = 500;
+
+    if (err instanceof Error) {
+      errorMessage = err.message;
+      
+      // Handle specific OpenAI errors
+      if (errorMessage.includes('API key')) {
+        statusCode = 401;
+        errorMessage = 'Invalid OpenAI API key';
+      } else if (errorMessage.includes('assistant')) {
+        statusCode = 400;
+        errorMessage = 'Assistant configuration error';
+      } else if (errorMessage.includes('thread')) {
+        statusCode = 400;
+        errorMessage = 'Thread error';
+      }
+    }
+
+    return NextResponse.json({ error: errorMessage }, { status: statusCode });
   }
 }
