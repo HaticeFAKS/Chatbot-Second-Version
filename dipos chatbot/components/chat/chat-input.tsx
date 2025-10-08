@@ -52,7 +52,7 @@ export function ChatInput({
 
   return (
     <Card
-      className="border border-sage-200/60 dark:border-sage-800/70 bg-sage-50/90 dark:bg-sage-950/50 backdrop-blur-sm shadow-sm"
+      className="border border-sage-200/60 dark:border-sage-700/80 bg-sage-50/90 dark:bg-sage-950/60 backdrop-blur-sm shadow-sm"
     >
       <div className="p-2 sm:p-3">
         <div className="flex items-end gap-2">

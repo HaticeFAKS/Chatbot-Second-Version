@@ -28,7 +28,7 @@ export function QuickRating({ messageId, currentRating, onRatingChange, disabled
             "w-8 h-8 p-0 transition-all duration-200",
             isPositive && "bg-green-100 dark:bg-green-900/20",
             !disabled && "hover:bg-green-50 dark:hover:bg-green-900/10 hover:scale-105",
-            disabled && "cursor-not-allowed opacity-50",
+            disabled && "cursor-default",
           )}
           disabled={disabled}
           onClick={() => !disabled && onRatingChange(messageId, 5)}
@@ -44,7 +44,7 @@ export function QuickRating({ messageId, currentRating, onRatingChange, disabled
             "w-8 h-8 p-0 transition-all duration-200",
             isNegative && "bg-red-100 dark:bg-red-900/20",
             !disabled && "hover:bg-red-50 dark:hover:bg-red-900/10 hover:scale-105",
-            disabled && "cursor-not-allowed opacity-50",
+            disabled && "cursor-default",
           )}
           disabled={disabled}
           onClick={() => !disabled && onRatingChange(messageId, 1)}

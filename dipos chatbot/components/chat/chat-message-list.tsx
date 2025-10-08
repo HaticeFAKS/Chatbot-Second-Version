@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { ChatMessage, Message } from "./chat-message";
+import { ChatTypingIndicator } from "./chat-typing-indicator";
 
 interface ChatMessageListProps {
   messages: Message[];
@@ -21,11 +22,11 @@ export function ChatMessageList({ messages, isLoading, onRatingChange }: ChatMes
   return (
     <div className="flex-1 overflow-y-auto p-4 space-y-4">
       {messages.length === 0 ? (
-        <div className="flex items-center justify-center h-full text-gray-700">
+        <div className="flex items-center justify-center h-full text-foreground">
           <div className="text-center">
-            <div className="w-24 h-24 mx-auto mb-4 opacity-70 rounded-full bg-[#a8cc44]" />
-            <p className="text-lg font-semibold text-gray-800">ChatBot'a Hoş Geldiniz</p>
-            <p className="text-sm mt-2 text-gray-600">Sohbeti başlatmak için bir mesaj yazın</p>
+            <div className="w-24 h-24 mx-auto mb-4 opacity-70 rounded-full bg-[#a8cc44] dark:bg-[#8fb83a]" />
+            <p className="text-lg font-semibold text-foreground">ChatBot'a Hoş Geldiniz</p>
+            <p className="text-sm mt-2 text-muted-foreground">Sohbeti başlatmak için bir mesaj yazın</p>
           </div>
         </div>
       ) : (
@@ -35,12 +36,7 @@ export function ChatMessageList({ messages, isLoading, onRatingChange }: ChatMes
       )}
 
       {isLoading && (
-        <div className="flex gap-3 p-4 rounded-lg max-w-3xl mr-auto bg-white border border-gray-200 shadow-sm">
-          <div className="w-8 h-8 rounded-full bg-[#a8cc44]" />
-          <div className="flex items-center gap-2">
-            <span className="animate-pulse text-gray-700">Düşünülüyor...</span>
-          </div>
-        </div>
+        <ChatTypingIndicator isVisible={true} />
       )}
 
       <div ref={messagesEndRef} />

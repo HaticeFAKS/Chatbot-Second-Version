@@ -14,6 +14,7 @@ export async function POST(request: NextRequest) {
 
     const aiResponse = await getOpenAIResponse(message, threadId);
 
+
     const botMsg: ChatMessage = {
       message: aiResponse.response,
       threadId: aiResponse.threadId,

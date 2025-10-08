@@ -41,7 +41,7 @@ export function MessageRating({
             className={cn(
               "w-6 h-6 p-0 hover:bg-transparent transition-all duration-200",
               !disabled && "hover:scale-110",
-              disabled && "cursor-not-allowed opacity-50",
+              disabled && "cursor-default",
             )}
             disabled={disabled}
             onClick={() => !disabled && onRatingChange(messageId, rating)}
@@ -53,7 +53,11 @@ export function MessageRating({
             <Star
               className={cn(
                 "w-4 h-4 transition-all duration-200",
-                rating <= display ? "fill-yellow-400 text-yellow-400" : "text-gray-300 hover:text-yellow-300",
+                rating <= display 
+                  ? "fill-yellow-400 text-yellow-400" 
+                  : disabled 
+                    ? "text-gray-300" 
+                    : "text-gray-300 hover:text-yellow-300",
               )}
             />
           </Button>
@@ -63,7 +67,9 @@ export function MessageRating({
       {currentRating > 0 && (
         <div className="flex items-center gap-1 animate-fade-in">
           <ThumbsUp className="w-3 h-3 text-green-500" />
-          <span className="text-xs text-green-600 dark:text-green-400">Teşekkürler! ({currentRating}/5)</span>
+          <span className="text-xs text-green-600 dark:text-green-400">
+            Teşekkürler! ({currentRating}/5)
+          </span>
         </div>
       )}
     </div>

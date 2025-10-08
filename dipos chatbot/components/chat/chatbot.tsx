@@ -114,6 +114,9 @@ export function Chatbot({
 
       try {
         // İlk mesajda threadId gönderme!
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 45000); // 45 saniye timeout
+        
         const res = await fetch("/api/chat", {
           method: "POST",
           body: JSON.stringify(
@@ -122,7 +125,10 @@ export function Chatbot({
               : { message: content }
           ),
           headers: { "Content-Type": "application/json" },
+          signal: controller.signal,
         });
+        
+        clearTimeout(timeoutId);
         const data = await res.json();
 
         // Backend'den dönen threadId'yi kaydet
@@ -145,7 +151,27 @@ export function Chatbot({
         }
       } catch (e) {
         console.error("[chatbot] send error:", e);
-        setMessages((prev) => prev.filter(m => m.id !== userMessage.id));
+        
+        let errorMessage = "Bir hata oluştu. Lütfen tekrar deneyin.";
+        
+        if (e instanceof Error) {
+          if (e.name === 'AbortError') {
+            errorMessage = "⏱️ İstek zaman aşımına uğradı. Lütfen tekrar deneyin.";
+          } else if (e.message.includes('timeout')) {
+            errorMessage = "⏱️ Yanıt çok uzun sürdü. Lütfen tekrar deneyin.";
+          }
+        }
+        
+        // Hata mesajı ekle
+        setMessages((prev) => [
+          ...prev.filter(m => m.id !== userMessage.id),
+          {
+            id: uuidv4(),
+            content: errorMessage,
+            role: "assistant",
+            timestamp: new Date(),
+          },
+        ]);
       } finally {
         setIsLoading(false);
       }
@@ -154,12 +180,65 @@ export function Chatbot({
   );
 
   // Rating değişikliği için handler
-  const handleRatingChange = (messageId: string, rating: number) => {
-    setMessages((prev) =>
-      prev.map((msg) =>
-        msg.id === messageId ? { ...msg, rating } : msg
-      )
-    );
+  const handleRatingChange = async (messageId: string, rating: number) => {
+    try {
+      // Mesajın zaten rating'i varsa işlem yapma
+      const existingMessage = messages.find(msg => msg.id === messageId);
+      if (existingMessage?.rating && existingMessage.rating > 0) {
+        console.log('Bu mesaj zaten değerlendirilmiş');
+        return;
+      }
+
+      // Frontend state'ini hemen güncelle
+      setMessages((prev) =>
+        prev.map((msg) =>
+          msg.id === messageId ? { ...msg, rating } : msg
+        )
+      );
+
+      // API'ye rating gönder
+      if (threadId) {
+        // Message index'ini bul
+        const messageIndex = messages.findIndex(msg => msg.id === messageId);
+        
+        if (messageIndex !== -1) {
+          // Conversation history'i hazırla
+          const conversationHistory = [];
+          for (let i = 0; i <= messageIndex; i++) {
+            const msg = messages[i];
+            if (msg.role === "user" && i + 1 < messages.length && messages[i + 1].role === "assistant") {
+              conversationHistory.push({
+                userMessage: msg.content,
+                assistantResponse: messages[i + 1].content
+              });
+            }
+          }
+
+          // API call
+          const response = await fetch('/api/feedback', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              sessionId: threadId,
+              messageIndex: Math.floor(messageIndex / 2), // User-Assistant pair index
+              rating,
+              conversationHistory
+            }),
+          });
+
+          if (response.ok) {
+            const result = await response.json();
+            console.log('Rating saved successfully:', result);
+          } else {
+            console.error('Failed to save rating:', response.status);
+          }
+        }
+      }
+    } catch (error) {
+      console.error('Error handling rating change:', error);
+    }
   };
 
   // Reset
